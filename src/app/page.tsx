@@ -1,13 +1,16 @@
-"use client"
 import React from "react";
-import {FullPageLanding, FloraThemeProvider} from "flora";
 import {theme} from "@/theme";
+import {FloraThemeProvider, BGLandingNav, BrowserOnlyFadeIn, FloraGlobalStyle} from "@/app/client";
 
 export default function Home() {
     return (
         <FloraThemeProvider theme={theme}>
-            <main className="min-h-screen">
-                <FullPageLanding imagePath={"test.jpgf"} title={"Binary Garden Documentation"}/>
+            <FloraGlobalStyle/>
+            <main>
+                <BrowserOnlyFadeIn>
+                    <BGLandingNav
+                        fullPageLandingProps={{imagePath: "test.jpg", title: "Binary Garden Documentation"}}/>
+                </BrowserOnlyFadeIn>
             </main>
         </FloraThemeProvider>
     );
