@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {theme} from "@/theme";
+import React from "react";
+import {FloraGlobalStyle, FloraThemeProvider} from "flora";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      {children}
+      <FloraThemeProvider theme={theme}>
+          <FloraGlobalStyle/>
+          {children}
+      </FloraThemeProvider>
       </body>
     </html>
   );
