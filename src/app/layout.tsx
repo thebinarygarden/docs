@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import {theme} from "@/theme";
 import React from "react";
-import {FloraGlobalStyle, FloraThemeProvider} from "flora/theme";
+import {FloraGlobalStyle, FloraThemeProvider} from "bgflora/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 

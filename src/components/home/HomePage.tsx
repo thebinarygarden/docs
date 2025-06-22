@@ -1,6 +1,6 @@
 import React from "react";
-import {BGLanding} from "flora/bg";
-import {SideNavbar} from "flora/navigation";
+import {BGLanding} from "bgflora/bg";
+import {SideNavbar} from "bgflora/navigation";
 
 export default function HomePage() {
 
